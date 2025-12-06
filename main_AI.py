@@ -5,18 +5,15 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeybo
 import asyncio
 from putergenai import PuterClient
 import os
-# from dotenv import load_dotenv
-# load_dotenv()
+from dotenv import load_dotenv
+load_dotenv()
 # -------------------
 # --- CONFIG ---
 # -------------------
 
-BOT_TOKEN = os.environ.get('BOT_TOKEN')
-USERNAME = os.environ.get('USERNAME')
-PASSWORD = os.environ.get('PASSWORD')
-# BOT_TOKEN = os.getenv('BOT_TOKEN')
-# USERNAME = os.getenv('USERNAME')
-# PASSWORD = os.getenv('PASSWORD')
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+USERNAME = os.getenv('USERNAME')
+PASSWORD = os.getenv('PASSWORD')
 
 bot = AsyncTeleBot(BOT_TOKEN)
 
